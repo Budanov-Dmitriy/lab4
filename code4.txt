@@ -12,11 +12,11 @@ int **mass, *visit;
 
 void DFS(int p, int n) {
 	int s;
-	printf("%d  ", p);
 	visit[p] = 1;
 	for (s = 0; s < n;s++) {
 		if (visit[s] == 0 && mass[p][s] == 1) {
 			DFS(s, n);
+			printf("%d  ", p);
 		}
 	}
 }
